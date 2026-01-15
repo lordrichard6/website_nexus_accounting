@@ -1,0 +1,131 @@
+.hero {
+    padding: 5rem 0;
+    background: var(--off-white);
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(20, 108, 99, 0.1);
+    color: var(--teal);
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+}
+
+.title {
+    margin-bottom: 1.5rem;
+    color: var(--navy);
+}
+
+.desc {
+    font-size: 1.15rem;
+    color: var(--slate);
+    margin-bottom: 2rem;
+    max-width: 500px;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--navy);
+    font-weight: 500;
+}
+
+.icon {
+    color: var(--teal);
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.imageWrapper {
+    position: relative;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+.floatCard {
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    border-left: 4px solid var(--teal);
+    animation: float 4s ease-in-out infinite;
+}
+
+.floatLabel {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--slate);
+    margin-bottom: 0.25rem;
+}
+
+.floatValue {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--navy);
+    font-family: var(--font-heading);
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 900px) {
+    .hero {
+        text-align: center;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .features,
+    .actions {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .floatCard {
+        display: none;
+    }
+}

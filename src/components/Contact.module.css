@@ -1,0 +1,133 @@
+.contact {
+    background: var(--off-white);
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.label {
+    color: var(--teal);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.info h2 {
+    margin-bottom: 1.5rem;
+    color: var(--navy);
+}
+
+.desc {
+    color: var(--slate);
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.methods {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.method {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.iconCircle {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--teal);
+    box-shadow: var(--shadow-sm);
+    flex-shrink: 0;
+}
+
+.method strong {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--navy);
+    margin-bottom: 0.25rem;
+}
+
+.method p {
+    font-size: 0.9rem;
+    color: var(--slate);
+}
+
+.form {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    border-top: 5px solid var(--teal);
+}
+
+.form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--navy);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.input,
+.select,
+.textarea {
+    width: 100%;
+    padding: 0.85rem;
+    border: 1px solid var(--light-border);
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+    font-family: var(--font-body);
+    transition: border-color 0.2s;
+    color: var(--navy);
+}
+
+.textarea {
+    margin-bottom: 1.5rem;
+}
+
+.select {
+    margin-bottom: 1rem;
+    background-color: white;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+    outline: none;
+    border-color: var(--teal);
+}
+
+@media (max-width: 900px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .methods,
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

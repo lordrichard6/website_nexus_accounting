@@ -1,0 +1,207 @@
+.section {
+    background: var(--navy);
+    color: white;
+    padding: 6rem 0;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.label {
+    color: var(--teal);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.content h2 {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-heading);
+}
+
+.desc {
+    color: #94A3B8;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    line-height: 1.8;
+}
+
+.benefits {
+    display: flex;
+    gap: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+}
+
+.benefit {
+    display: flex;
+    flex-direction: column;
+}
+
+.benefit strong {
+    font-size: 2.5rem;
+    color: var(--teal);
+    font-family: var(--font-heading);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.calculator {
+    background: white;
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    color: var(--navy);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    color: var(--teal);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.inputGroup label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--slate);
+}
+
+.inputWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.inputIcon {
+    position: absolute;
+    left: 10px;
+    color: var(--slate);
+    pointer-events: none;
+}
+
+.input {
+    width: 100%;
+    padding: 0.75rem 0.75rem 0.75rem 2.25rem;
+    border: 1px solid var(--light-border);
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--navy);
+    font-family: var(--font-body);
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--teal);
+}
+
+.results {
+    background: var(--off-white);
+    padding: 1.5rem;
+    border-radius: var(--radius-sm);
+    margin-bottom: 1.5rem;
+}
+
+.resultRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: var(--slate);
+}
+
+.profitValue {
+    color: var(--navy);
+}
+
+.divider {
+    height: 1px;
+    background: var(--light-border);
+    margin: 1rem 0;
+}
+
+.savingsBox {
+    text-align: center;
+}
+
+.savingsLabel {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--teal);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.savingsValue {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--navy);
+    font-family: var(--font-heading);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.savingsNote {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--slate);
+    font-style: italic;
+}
+
+.actionBtn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--teal);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: var(--font-body);
+}
+
+.actionBtn:hover {
+    background: #0E5C54;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(20, 108, 99, 0.2);
+}
+
+@media (max-width: 900px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .inputs {
+        grid-template-columns: 1fr;
+    }
+}

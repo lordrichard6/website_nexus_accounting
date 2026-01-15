@@ -1,0 +1,101 @@
+.services {
+    background: white;
+}
+
+.header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+}
+
+.label {
+    color: var(--teal);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.header h2 {
+    margin-bottom: 1rem;
+    color: var(--navy);
+}
+
+.header p {
+    color: var(--slate);
+    font-size: 1.1rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.card {
+    padding: 2.5rem 2rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--light-border);
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--teal);
+}
+
+.iconWrapper {
+    width: 56px;
+    height: 56px;
+    background: var(--off-white);
+    color: var(--teal);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: background 0.3s ease;
+}
+
+.card:hover .iconWrapper {
+    background: var(--teal);
+    color: white;
+}
+
+.cardTitle {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--navy);
+}
+
+.cardDesc {
+    color: var(--slate);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.learnMore {
+    color: var(--teal);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.learnMore:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
