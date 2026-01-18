@@ -53,7 +53,7 @@ export default function Hero() {
                     />
                     <div className={styles.floatCard}>
                         <span className={styles.floatLabel}>Client Savings 2024</span>
-                        <span className={styles.floatValue}>$2.4M+</span>
+                        <span className={styles.floatValue}>€2.4M+</span>
                     </div>
                 </div>
             </div>
