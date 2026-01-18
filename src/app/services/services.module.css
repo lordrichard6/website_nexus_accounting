@@ -1,0 +1,73 @@
+.hero {
+    background: linear-gradient(135deg, var(--emerald), var(--teal));
+    color: white;
+    padding: 6rem 0 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.125rem;
+    max-width: 600px;
+    opacity: 0.95;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--light-border);
+    transition: all var(--transition-base);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--teal);
+}
+
+.icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, var(--emerald), var(--teal));
+    color: white;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--navy);
+}
+
+.card p {
+    color: var(--slate);
+    line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

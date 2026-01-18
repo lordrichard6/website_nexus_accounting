@@ -1,0 +1,37 @@
+.hero {
+    background: var(--off-white);
+    padding: 5rem 0 3rem;
+    border-bottom: 1px solid var(--light-border);
+}
+
+.hero h1 {
+    margin-bottom: 0.5rem;
+    color: var(--navy);
+}
+
+.hero p {
+    color: var(--slate);
+    font-size: 0.9rem;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--navy);
+}
+
+.content p {
+    line-height: 1.8;
+    color: var(--slate);
+    margin-bottom: 1rem;
+}
+
+.content a {
+    color: var(--teal);
+    font-weight: 600;
+}

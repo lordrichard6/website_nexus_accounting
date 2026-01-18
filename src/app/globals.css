@@ -25,10 +25,16 @@
   /* Radius */
   --radius-sm: 4px;
   --radius-md: 6px;
+  --radius-lg: 12px;
 
   /* Shadows - Crisp */
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
 }
 
 * {
@@ -74,6 +80,12 @@ h3 {
   font-size: 1.5rem;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition-fast);
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -87,6 +99,7 @@ h3 {
 .btn {
   display: inline-flex;
   align-items: center;
+  gap: 0.5rem;
   justify-content: center;
   padding: 0.75rem 1.5rem;
   font-weight: 600;
@@ -94,23 +107,25 @@ h3 {
   border-radius: var(--radius-sm);
   border: none;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all var(--transition-base);
   font-family: var(--font-body);
 }
 
 .btn-primary {
   background: var(--primary);
   color: white;
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-primary:hover {
   background: #0E5C54;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-outline {
   background: transparent;
-  border: 1px solid var(--primary);
+  border: 2px solid var(--primary);
   color: var(--primary);
 }
 
@@ -119,8 +134,64 @@ h3 {
   color: white;
 }
 
+/* Pattern Backgrounds */
+.pattern-dots {
+  background-image: radial-gradient(circle, var(--teal) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.08;
+}
+
+.pattern-grid {
+  background-image:
+    linear-gradient(var(--emerald) 1px, transparent 1px),
+    linear-gradient(90deg, var(--emerald) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.06;
+}
+
+/* Animation Utilities */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.6s ease forwards;
+}
+
 .text-teal {
   color: var(--teal);
+}
+
+.text-emerald {
+  color: var(--emerald);
+}
+
+.bg-surface {
+  background: var(--surface);
 }
 
 @media (max-width: 768px) {
@@ -130,5 +201,9 @@ h3 {
 
   h2 {
     font-size: 1.75rem;
+  }
+
+  .section-padding {
+    padding: 3.5rem 0;
   }
 }
