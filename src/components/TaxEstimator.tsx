@@ -69,12 +69,12 @@ export default function TaxEstimator() {
                         <div className={styles.results}>
                             <div className={styles.resultRow}>
                                 <span>Estimated Profit:</span>
-                                <span className={styles.profitValue}>${profit.toLocaleString()}</span>
+                                <span className={styles.profitValue}>€{profit.toLocaleString()}</span>
                             </div>
                             <div className={styles.divider}></div>
                             <div className={styles.savingsBox}>
                                 <span className={styles.savingsLabel}>Potential Tax Savings</span>
-                                <span className={styles.savingsValue}>${potentialSavings.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
+                                <span className={styles.savingsValue}>€{potentialSavings.toLocaleString(undefined, { maximumFractionDigits: 0 })}</span>
                                 <span className={styles.savingsNote}>*Based on strategic planning implementation</span>
                             </div>
                         </div>
