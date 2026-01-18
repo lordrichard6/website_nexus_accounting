@@ -1,23 +1,24 @@
 .header {
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 100;
+    left: 0;
+    right: 0;
     background: white;
     border-bottom: 1px solid var(--light-border);
-    padding: 1rem 0;
+    z-index: 1000;
 }
 
 .container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    color: var(--teal);
 }
 
 .logoText {
@@ -27,11 +28,11 @@
 }
 
 .brand {
-    font-family: var(--font-heading);
+    font-size: 1.5rem;
     font-weight: 700;
-    font-size: 1.25rem;
+    font-family: var(--font-heading);
     color: var(--navy);
-    letter-spacing: 0.5px;
+    letter-spacing: -0.02em;
 }
 
 .sub {
@@ -74,10 +75,50 @@
     color: var(--teal);
 }
 
-@media (max-width: 900px) {
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--navy);
+}
 
-    .nav,
+@media (max-width: 900px) {
+    .nav {
+        position: fixed;
+        top: 65px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        gap: 0;
+        padding: 2rem;
+        box-shadow: var(--shadow-lg);
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: all var(--transition-base);
+        border-bottom: 1px solid var(--light-border);
+    }
+
+    .nav.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .nav a {
+        width: 100%;
+        padding: 1rem;
+        border-bottom: 1px solid var(--light-border);
+    }
+
+    .actions,
     .portalLink {
         display: none;
+    }
+
+    .hamburger {
+        display: block;
     }
 }
