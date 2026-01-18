@@ -29,7 +29,7 @@ export default function Footer() {
                         <h4>Company</h4>
                         <Link href="/about">About Us</Link>
                         <Link href="/#contact">Contact</Link>
-                        <Link href="#">Client Portal</Link>
+                        <Link href="/portal">Client Portal</Link>
                     </div>
 
                     <div className={styles.linksCol}>

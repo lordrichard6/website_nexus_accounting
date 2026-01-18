@@ -13,6 +13,7 @@ const services = [
 export default function Services() {
     return (
         <section id="services" className={`section-padding ${styles.services}`}>
+            <div className="pattern-dots" style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}></div>
             <div className="container">
                 <div className={styles.header}>
                     <span className={styles.label}>Our Expertise</span>

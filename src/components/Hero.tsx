@@ -6,6 +6,7 @@ import { CheckCircle2 } from 'lucide-react';
 export default function Hero() {
     return (
         <section className={styles.hero}>
+            <div className="pattern-grid" style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}></div>
             <div className={`container ${styles.container}`}>
                 <div className={styles.content}>
                     <div className={styles.badge}>Trusted by 500+ Businesses</div>

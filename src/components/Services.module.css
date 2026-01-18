@@ -1,5 +1,7 @@
 .services {
     background: white;
+    position: relative;
+    overflow: hidden;
 }
 
 .header {
