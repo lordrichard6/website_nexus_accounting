@@ -27,7 +27,7 @@ export default function Header() {
                 </nav>
 
                 <div className={styles.actions}>
-                    <Link href="#portal" className={styles.portalLink}>Client Portal</Link>
+                    <Link href="/portal" className={styles.portalLink}>Client Portal</Link>
                     <Link href="/#consultation" className="btn btn-primary">Free Consultation</Link>
                 </div>
 

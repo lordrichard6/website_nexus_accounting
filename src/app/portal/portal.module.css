@@ -1,0 +1,120 @@
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--emerald), var(--teal));
+    position: relative;
+    padding: 6rem 0;
+}
+
+.loginCard {
+    max-width: 480px;
+    width: 100%;
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: 3rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.icon {
+    color: var(--teal);
+    margin-bottom: 1rem;
+}
+
+.header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--navy);
+}
+
+.header p {
+    color: var(--slate);
+    font-size: 0.95rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.field label {
+    font-weight: 600;
+    color: var(--navy);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.field input {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--light-border);
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    font-family: var(--font-body);
+    transition: all var(--transition-fast);
+}
+
+.field input:focus {
+    outline: none;
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgba(20, 108, 99, 0.1);
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.links a {
+    color: var(--teal);
+    font-weight: 600;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.note {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: var(--off-white);
+    border-left: 3px solid var(--teal);
+    border-radius: var(--radius-sm);
+}
+
+.note p {
+    font-size: 0.85rem;
+    color: var(--slate);
+    line-height: 1.6;
+}
+
+.note strong {
+    color: var(--navy);
+}
+
+@media (max-width: 600px) {
+    .loginCard {
+        padding: 2rem;
+    }
+
+    .links {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+}
